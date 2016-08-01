@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:600);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Dosis", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.text-link {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  font-size: 12px;
+}
+.text-link a {
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+}
+.text-link a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.carousel {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.slick-list {
+  overflow: visible;
+  padding: 0 4px;
+}
+
+.slick-track {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.slick-prev,
+.slick-next {
+  position: fixed;
+  bottom: 12px;
+  padding: 4px 12px;
+  font-family: "Dosis", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  z-index: 999;
+}
+.slick-prev:active,
+.slick-next:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+.slick-prev {
+  left: 12px;
+}
+
+.slick-next {
+  left: 90px;
+}
+
+.item {
+  position: relative;
+  margin: 4px;
+  opacity: 0.3;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: opacity 1.6s cubic-bezier(0, 1, 0.86, 1), -webkit-transform 0.8s cubic-bezier(0, 1, 0.86, 1);
+  transition: opacity 1.6s cubic-bezier(0, 1, 0.86, 1), -webkit-transform 0.8s cubic-bezier(0, 1, 0.86, 1);
+  transition: opacity 1.6s cubic-bezier(0, 1, 0.86, 1), transform 0.8s cubic-bezier(0, 1, 0.86, 1);
+  transition: opacity 1.6s cubic-bezier(0, 1, 0.86, 1), transform 0.8s cubic-bezier(0, 1, 0.86, 1), -webkit-transform 0.8s cubic-bezier(0, 1, 0.86, 1);
+  outline: none;
+  overflow: hidden;
+  z-index: -1;
+}
+.item img {
+  width: 100%;
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+  -webkit-transform: rotate(0) translate3d(0, 0, 0);
+          transform: rotate(0) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-filter 1.6s cubic-bezier(0, 1, 0.86, 1);
+  transition: -webkit-filter 1.6s cubic-bezier(0, 1, 0.86, 1);
+  transition: filter 1.6s cubic-bezier(0, 1, 0.86, 1);
+  transition: filter 1.6s cubic-bezier(0, 1, 0.86, 1), -webkit-filter 1.6s cubic-bezier(0, 1, 0.86, 1);
+}
+.item.slick-animate {
+  opacity: 1;
+  z-index: 99;
+  -webkit-transition: opacity 0.4s cubic-bezier(0, 1, 0.86, 1), -webkit-filter 1.6s cubic-bezier(0, 1, 0.86, 1), -webkit-transform 0.4s cubic-bezier(0, 1, 0.86, 1);
+  transition: opacity 0.4s cubic-bezier(0, 1, 0.86, 1), -webkit-filter 1.6s cubic-bezier(0, 1, 0.86, 1), -webkit-transform 0.4s cubic-bezier(0, 1, 0.86, 1);
+  transition: filter 1.6s cubic-bezier(0, 1, 0.86, 1), opacity 0.4s cubic-bezier(0, 1, 0.86, 1), transform 0.4s cubic-bezier(0, 1, 0.86, 1);
+  transition: filter 1.6s cubic-bezier(0, 1, 0.86, 1), opacity 0.4s cubic-bezier(0, 1, 0.86, 1), transform 0.4s cubic-bezier(0, 1, 0.86, 1), -webkit-filter 1.6s cubic-bezier(0, 1, 0.86, 1), -webkit-transform 0.4s cubic-bezier(0, 1, 0.86, 1);
+}
+@media (min-width: 480px) {
+  .item.slick-animate {
+    -webkit-transform: translate3d(0, 0, 0) scale(3);
+            transform: translate3d(0, 0, 0) scale(3);
+  }
+}
+.item.slick-animate img {
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
