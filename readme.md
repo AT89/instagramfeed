@@ -1,5 +1,8 @@
 #Anhtice instagram feed
 
+##To do:
+1. Add content/desc on picture focus
+
 ##big props:
 Ken Wheeler's slick.js http://kenwheeler.github.io/slick/
 
