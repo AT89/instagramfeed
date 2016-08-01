@@ -1,6 +1,8 @@
 #Anhtice instagram feed
 
 ##big props:
-slick.js
+Ken Wheeler's slick.js http://kenwheeler.github.io/slick/
 
-Ryan Mulligan http://codepen.io/hexagoncircle/pen/KrBGyV
+Ryan Mulligan's codepen http://codepen.io/hexagoncircle/pen/KrBGyV
+
+Instagram API https://rudrastyh.com/javascript/get-photos-from-instagram.html
